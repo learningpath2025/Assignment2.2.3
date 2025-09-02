@@ -8,9 +8,9 @@ namespace Assignment2._2._3
 {
     internal class Square : Shape
     {
-        int side { get; set; }
+        double side { get; set; }
         public Square() { }
-        public Square(int side)
+        public Square(double side)
         {
             this.side = side;
         }

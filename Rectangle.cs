@@ -8,10 +8,10 @@ namespace Assignment2._2._3
 {
     internal class Rectangle : Shape
     {
-        int length { get; set; }
-        int breadth { get; set; }
+        double length { get; set; }
+        double breadth { get; set; }
         public Rectangle() { }
-        public Rectangle(int length, int breadth)
+        public Rectangle(double length, double breadth)
         {
             this.length = length;
             this.breadth = breadth;

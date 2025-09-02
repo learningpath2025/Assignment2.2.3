@@ -8,9 +8,9 @@ namespace Assignment2._2._3
 {
     internal class Circle : Shape
     {
-        int radius { get; set; }
+        double radius { get; set; }
         public Circle() { }
-        public Circle(int radius)
+        public Circle(double radius)
         {
             this.radius = radius;
         }

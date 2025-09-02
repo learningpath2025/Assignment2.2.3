@@ -24,13 +24,13 @@ namespace Assignment2._2._3
                     switch (choice)
                     {
                         case "1":
-                            Console.WriteLine($"Area of the Circle is: {CircleArea}");
+                            Console.WriteLine($"Area of the Circle is: {CircleArea()}");
                             break;
                         case "2":
-                            Console.WriteLine($"Area of the Square is: {SquareArea}");
+                            Console.WriteLine($"Area of the Square is: {SquareArea()}");
                             break;
                         case "3":
-                            Console.WriteLine($"Are of the Rectangle is: {RectangleArea}");
+                            Console.WriteLine($"Are of the Rectangle is: {RectangleArea()}");
                             break;
                         default:
                             Console.WriteLine("Invalid choice. Please select a valid operation.");
@@ -94,27 +94,45 @@ namespace Assignment2._2._3
         static double CircleArea()
         {
             Console.WriteLine("Enter radius of circle:");
-            int radius = Convert.ToInt32(Console.ReadLine());
-            Circle circle = new Circle(radius);
-            return circle.CalculateArea();
+            double radius = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter color of circle:");
+            string? color = Console.ReadLine();
+            Shape shape = new Circle(radius);
+            shape.ID = 1;
+            shape.Name = "Circle";
+            shape.Color = color;
+            Console.WriteLine($"\n\nShape ID: {shape.ID}\nShape Name: {shape.Name}\nShape Color: {shape.Color}");
+            return shape.CalculateArea();
         }
 
         static double SquareArea()
         {
             Console.WriteLine("Enter side of square:");
-            int side = Convert.ToInt32(Console.ReadLine());
-            Square square = new Square(side);
-            return square.CalculateArea();
+            double side = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter color of square:");
+            string? color = Console.ReadLine();
+            Shape shape = new Square(side);
+            shape.ID = 2;
+            shape.Name = "Square";
+            shape.Color = color;
+            Console.WriteLine($"\n\nShape ID: {shape.ID}\nShape Name: {shape.Name}\nShape Color: {shape.Color}");
+            return shape.CalculateArea();
         }
 
         static double RectangleArea()
         {
             Console.WriteLine("Enter length of rectangle:");
-            int length = Convert.ToInt32(Console.ReadLine());
+            double length = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Enter breadth of rectangle:");
-            int breadth = Convert.ToInt32(Console.ReadLine());
-            Rectangle rectangle = new Rectangle(length, breadth);
-            return rectangle.CalculateArea();
+            double breadth = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter color of rectangle:");
+            string? color = Console.ReadLine();
+            Shape shape = new Rectangle(length, breadth);
+            shape.ID = 3;
+            shape.Name = "Rectangle";
+            shape.Color = color;
+            Console.WriteLine($"\n\nShape ID: {shape.ID}\nShape Name: {shape.Name}\nShape Color: {shape.Color}");
+            return shape.CalculateArea();
         }
 
     }
